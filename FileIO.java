@@ -3,6 +3,7 @@ package com.practice.demo;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -25,6 +26,10 @@ public class FileIO {
 		Path filePath = Paths.get("E:\\LFP191\\dummmy.txt");
 		Files.delete(filePath);
 		System.out.println("deleted file");
+		
+		// Path filePath1 = Paths.get("E:\\LFP191\\dummy.txt");
+		Reader reader = Files.newBufferedReader(Paths.get("E:\\LFP191\\dummy.txt"));
+		System.out.println(reader);
 	}
 
 }
